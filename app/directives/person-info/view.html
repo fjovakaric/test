@@ -1,0 +1,142 @@
+<div class="person-info">
+    <div class="row">
+        <div class="col-sm-2 profile-pic">
+            <img ng-src="{{ activePerson.profilePhotoUrl }}" alt=""/>
+            <i class="gender-icon fa {{ activePerson.genderIcon }}"></i>
+        </div>
+        <div class="col-sm-7 profile-info">
+            <h2> {{ activePerson.first_name }} {{ activePerson.last_name }} </h2>
+            <p class="grey-three smaller"> DOB: {{ activePerson.dobDisplay }} </p>
+            <div class="orders">
+                <p class="bold"> {{ activePerson.total_orders }} </p>
+                <p class="grey-three smaller"> Total Orders </p>
+            </div>
+            <div class="payments">
+                <p class="bold"> {{ activePerson.total_payment }} </p>
+                <p class="grey-three smaller"> Total Payment </p>
+            </div>
+        </div>
+        <div class="col-sm-3 side-btns">
+            <button class="btn btn-blue btn-email"><i class="fa fa-envelope icon-left"></i> Email</button>
+            <button class="btn btn-grey"><i class="fa fa-pencil"></i></button>
+            <button class="btn btn-grey"><i class="fa fa-trash"></i></button>
+        </div>
+    </div>
+
+    <div class="row btn-row">
+        <button class="btn btn-lila uppercase">Supplies<i class="fa fa-remove icon-right"></i></button>
+        <button class="btn btn-grey uppercase"><i class="fa fa-plus icon-left"></i>Add Tag</button>
+    </div>
+
+    <div class="pnl pnl-info">
+        <div class="pnl-heading h3">
+            Occupation
+            <i ng-if="isCollapsed.occupation" ng-click="toggleCollapse('occupation')" class="fa fa-caret-down"></i>
+            <i ng-if="!isCollapsed.occupation" ng-click="toggleCollapse('occupation')" class="fa fa-caret-up"></i>
+        </div>
+        <div class="pnl-body" uib-collapse="isCollapsed.occupation">
+            <ul class="stat-list">
+                <li class="stat p">
+                    <span class="glyphicon glyphicon-briefcase grey-three icon"></span>
+                    <span class="grey-three data-type"> Position </span>
+                    {{ activePerson.job_title }}
+                </li>
+                <li class="stat p">
+                    <i class="fa fa-building-o grey-three icon"></i>
+                    <span class="grey-three data-type"> Company </span>
+                    {{ activePerson.company }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="pnl pnl-info">
+        <div class="pnl-heading h3">
+            Contacts
+            <i ng-if="isCollapsed.contacts" ng-click="toggleCollapse('contacts')" class="fa fa-caret-down"></i>
+            <i ng-if="!isCollapsed.contacts" ng-click="toggleCollapse('contacts')" class="fa fa-caret-up"></i>
+        </div>
+        <div class="pnl-body" uib-collapse="isCollapsed.contacts">
+            <ul class="stat-list">
+                <li class="stat p">
+                    <i class="fa fa-phone grey-three icon"></i>
+                    <span class="grey-three data-type"> Phone </span>
+                    {{ activePerson.phone }}
+                </li>
+                <li class="stat p">
+                    <i class="fa fa-mobile grey-three icon"></i>
+                    <span class="grey-three data-type"> Mobile </span>
+                    {{ activePerson.mobile }}
+                </li>
+                <li class="stat p">
+                    <i class="fa fa-envelope-o grey-three icon"></i>
+                    <span class="grey-three data-type"> Email </span>
+                    {{ activePerson.email }}
+                </li>
+                <li class="stat p">
+                    <i class="fa fa-skype grey-three icon"></i>
+                    <span class="grey-three data-type"> Skype </span>
+                    {{ activePerson.username }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="pnl pnl-info">
+        <div class="pnl-heading h3">
+            Social
+            <i ng-if="isCollapsed.social" ng-click="toggleCollapse('social')" class="fa fa-caret-down"></i>
+            <i ng-if="!isCollapsed.social" ng-click="toggleCollapse('social')" class="fa fa-caret-up"></i>
+        </div>
+        <div class="pnl-body" uib-collapse="isCollapsed.social">
+            <ul class="stat-list">
+                <li class="stat p">
+                    <i class="fa fa-facebook grey-three icon"></i>
+                    <span class="grey-three data-type"> Facebook </span>
+                    {{ activePerson.facebook }}
+                </li>
+                <li class="stat p">
+                    <i class="fa fa-twitter grey-three icon"></i>
+                    <span class="grey-three data-type"> Twitter </span>
+                    {{ activePerson.twitter }}
+                </li>
+                <li class="stat p">
+                    <i class="fa fa-google-plus grey-three icon"></i>
+                    <span class="grey-three data-type"> Google + </span>
+                    {{ activePerson.googleplus }}
+                </li>
+                <li class="stat p">
+                    <i class="fa fa-pinterest grey-three icon"></i>
+                    <span class="grey-three data-type"> Pinterest </span>
+                    {{ activePerson.pinterest }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="pnl pnl-info">
+        <div class="pnl-heading h3">
+            Address
+            <i ng-if="isCollapsed.address" ng-click="toggleCollapse('address')" class="fa fa-caret-down"></i>
+            <i ng-if="!isCollapsed.address" ng-click="toggleCollapse('address')" class="fa fa-caret-up"></i>
+        </div>
+        <div class="pnl-body" uib-collapse="isCollapsed.address">
+            <ul class="stat-list">
+                <li class="stat p">
+                    <i class="fa fa-map-marker grey-three icon"></i>
+                    <span class="grey-three data-type"> Address </span>
+                    {{ activePerson.street_number }} {{ activePerson.street_name }} Str.
+                </li>
+                <li class="stat p">
+                    <i class="fa fa-globe grey-three icon"></i>
+                    <span class="grey-three data-type"> City </span>
+                    {{ activePerson.city }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>

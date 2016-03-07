@@ -1,0 +1,115 @@
+.person-communication {
+  .feeds-heading {
+    display: inline-block;
+    width: 40%;
+  }
+  .feeds-search {
+    display: inline-block;
+    width: 58%;
+    vertical-align: top;
+  }
+
+  .feeds-view {
+    height: 500px;
+    overflow: scroll;
+    padding-top: 25px;
+  }
+
+  .feeds-wrapper {
+    padding-right: 10px;
+    position: relative;
+
+    .vertical-line {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      width: 17px;
+      height: 100%;
+
+      margin-top: 35px;
+      border-right: 4px solid $grey-background-three;
+    }
+  }
+  .feed-item {
+    position: relative;
+    z-index: 1;
+    padding: 10px 0;
+    .feed-icon {
+      display: inline-block;
+      vertical-align: top;
+      width: 30px;
+      height: 30px;
+
+      padding: 2px;
+      border-radius: 50%;
+
+      font-size: 15px;
+      line-height: 26px;
+      text-align: center;
+      color: white;
+    }
+
+    .feed-data {
+      display: inline-block;
+      vertical-align: top;
+      width: calc(100% - 35px);
+      padding-top: 2px;
+      padding-left: 5px;
+
+      .arrow-up {
+        width: 0;
+        height: 0;
+
+        position: relative;
+        left: 20px;
+
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid $grey-background-two;
+      }
+
+      .message {
+        background-color: $grey-background-two;
+        padding: 15px;
+        border-radius: 2px;
+
+        .status-label {
+          float: right;
+          background-color: $grey-background-three;
+          padding: 3px 8px;
+          margin: 0 0 0 5px;
+          text-transform: uppercase;
+          border-radius: 2px;
+        }
+      }
+
+      .reciever-data {
+        margin-top: 10px;
+        overflow: auto;
+
+        .photo,
+        .photo-placeholder {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          color: white;
+          line-height: 20px;
+          text-align: center;
+          float: left;
+        }
+
+        .reply {
+          float: left;
+          margin: 0 0 0 10px;
+          line-height: 20px;
+        }
+
+        span {
+          margin: 0 0 0 10px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

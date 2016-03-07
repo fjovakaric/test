@@ -1,0 +1,54 @@
+.navigation {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 710px;
+  padding-top: 16px;
+  
+  background-color: $purple-one;
+
+  .nav-group {
+    .nav-item {
+      width: 100%;
+      height: 80px;
+      padding: 10px 0;
+      margin: 0;
+
+      color: $grey-one;
+      text-align: center;
+      line-height: 24px;
+
+      .nav-icon {
+        width: 100%;
+        height: 26px;
+        line-height: 26px;
+
+        font-size: 24px;
+      }
+
+      a,
+      a:focus,
+      a:active {
+        color: $grey-one;
+        text-decoration: none;
+      }
+
+      &.active,
+      &:hover {
+        color: white;
+        background-color: $purple-two;
+        a {
+          color: white;
+        }
+      }
+      &.disabled:hover {
+        cursor: not-allowed;
+        a {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

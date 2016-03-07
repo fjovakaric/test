@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="buildconTest">
+    <head>
+        <base href="/">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="stylesheets/app.css">
+    </head>
+
+    <body>
+        <navigation></navigation>
+        <ui-view></ui-view>
+
+        <!-- Bower Components -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+        <!-- App -->
+        <script src="app/app.js"></script>
+
+        <!--Models-->
+        <!--<script src="models/Users.js"></script>-->
+
+        <!-- Pages -->
+        <script src="app/pages/contacts/controller.js"></script>
+            <script src="app/pages/contacts/all/controller.js"></script>
+
+        <!-- Services -->
+        <script src="app/services/people.js"></script>
+        <script src="app/services/feeds.js"></script>
+
+        <!-- Utils -->
+        <!--<script src="app/utils/active-person.js"></script>-->
+
+        <!-- Directives -->
+        <script src="app/directives/people-table/controller.js"></script>
+        <script src="app/directives/person-communication/controller.js"></script>
+        <script src="app/directives/person-info/controller.js"></script>
+
+        <!-- Partials -->
+        <script src="app/partials/navigation/controller.js"></script>
+
+        <!-- View-Models -->
+        <script src="app/view-models/Person.js"></script>
+        <script src="app/view-models/Feed.js"></script>
+    </body>
+</html>

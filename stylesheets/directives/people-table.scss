@@ -1,0 +1,83 @@
+.people-table {
+  thead {
+    input,
+    .p {
+      margin-top: 10px;
+    }
+    .p {
+      color: $grey-three;
+    }
+    .btn {
+      margin-left: 10px;
+    }
+  }
+  tbody {
+    display: block;
+    overflow-y: scroll;
+    height: 500px;
+
+    tr {
+      border-left: 2px solid transparent;
+
+      td {
+        padding: 6px 4px;
+        background-color: transparent;
+        vertical-align: middle;
+      }
+
+      .photo {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+      }
+
+      .photo-placeholder {
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: red;
+        line-height: 25px;
+        color: white;
+        text-align: center;
+      }
+
+      .p.italic {
+        color: $grey-three;
+      }
+
+      .tag {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+      }
+      .glyphicon {
+        font-size: 15px;
+        padding-right: 15px;
+      }
+
+      .glyphicon-star {
+        color: #F5B240;
+      }
+      .glyphicon-star-empty {
+        color: $grey-two;
+      }
+
+      &.active {
+        border-left-color: $blue-one;
+        background-color: $grey-background-one;
+
+        .name {
+          color: $blue-one;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $grey-background-one;
+      }
+
+    }
+
+  }
+}

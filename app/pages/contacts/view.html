@@ -1,0 +1,48 @@
+<article ng-controller="ContactsCtrl" class="page page-contacts">
+    <div class="page-navigation">
+        <h1>Contacts</h1>
+
+        <ul class="tabset sub-page-nav">
+            <li ng-repeat="tab in tabs"
+                class="tab-item p"
+                ng-class="{active: tab.active}"
+                ng-click="changeTab(tab.route)">
+
+                <span class="tab-icon glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                <a href="#">{{tab.heading}}</a>
+            </li>
+        </ul>
+
+        <div class="pnl pnl-dark">
+            <div class="pnl-heading">
+                <h3 class="uppercase">Tags: <span class="pnl-icon glyphicon glyphicon-plus pull-right" aria-hidden="true"></span></h3>
+            </div>
+            <div class="pnl-body">
+                <ul class="tags-list">
+                    <li ng-repeat="tag in tags" class="p">
+                        {{ tag.tagName }}
+                        <span class="circle pull-right" ng-style="{'border-color': tag.color}"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pnl pnl-dark">
+            <div class="pnl-heading">
+                <h3 class="uppercase">Groups: <span class="pnl-icon glyphicon glyphicon-plus pull-right" aria-hidden="true"></span></h3>
+            </div>
+            <div class="pnl-body">
+                <ul class="tags-list">
+                    <li ng-repeat="group in groups" class="p">
+                        {{ group.groupName }}
+                        <span class="circle pull-right" ng-style="{'border-color': group.color}"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="tabs[0].active" class="sub-page" contacts-all></div>
+    <!--<div class="sub-page" contacts-favourites></div>-->
+    <!--<div class="sub-page" contacts-unauthorized></div>-->
+</article>

@@ -1,0 +1,60 @@
+<div class="contacts-all">
+    <div class="row header-row">
+
+        <h1 class="pull-left">All Contacts</h1>
+
+        <form class="form-inline search-form">
+            <div class="form-group">
+                <input class="form-control input-icon-left"
+                       ng-change="filterContacts()"
+                       ng-model="searchWord"
+                       placeholder="Search Contact by name / email / company / position">
+                <i class="fa fa-search icon-left"></i>
+            </div>
+        </form>
+
+        <div class="header-buttons pull-right">
+            <button class="btn btn-green btn-m"><i class="fa fa-plus icon-left"></i> Add Contact </button>
+
+            <div class="btn-group dropdown dropdown-right" uib-dropdown>
+                <button id="split-button" class="btn btn-black btn-m"><i class="fa fa-plus icon-left"></i> Import From </button>
+                <!--<button id="split-button" type="button" class="btn btn-danger">Action</button>-->
+                <button type="button" class="btn btn-black btn-m" uib-dropdown-toggle>
+                    <span class="caret"></span>
+                    <span class="sr-only">Split button!</span>
+                </button>
+                <ul uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                    <li role="menuitem"><a href="#">Option 1</a></li>
+                    <li role="menuitem"><a href="#">Option 2</a></li>
+                    <li role="menuitem"><a href="#">Option 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 people-list">
+            <ul class="tabset tabset-blue">
+                <li ng-repeat="tab in tabs"
+                    class="tab-item h3"
+                    ng-class="{active: tab.active}"
+                    ng-click="changeTab(tab)">
+                    <a href="#">{{tab.heading}}</a>
+                </li>
+                <span class="p pull-right contacts-number"> {{people.length}} Contacts </span>
+            </ul>
+
+            <people-table ng-if="tabs[0].active && people"
+                          people="filteredPeople"
+                          active-person="activePerson"></people-table>
+
+        </div>
+        <div class="col-xs-8 person-profile">
+            <div class="person-info-wrapper">
+                <person-info ng-if="activePerson" active-person="activePerson"></person-info>
+            </div>
+            <div class="person-communication-wrapper">
+                <person-communication ng-if="activePerson" active-person="activePerson"></person-communication>
+            </div>
+        </div>
+    </div>
+</div>

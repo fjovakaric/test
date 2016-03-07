@@ -1,0 +1,41 @@
+.form-group {
+  position: relative;
+  width: 100%;
+  color: $grey-three;
+
+  .form-control {
+    width: 100%;
+    height: 30px;
+    border-radius: 2px;
+
+    font-size: 12px;
+    line-height: 14px;
+    font-family: $font-family-two;
+
+    @include placeholder {
+      font-style: italic;
+      font-size: 10px;
+    }
+  }
+
+  .input-icon-left {
+    padding-left: 30px;
+  }
+  .input-icon-right {
+    padding-right: 30px;
+  }
+  .icon-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 7px;
+    margin-left: 10px;
+  }
+  .icon-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 7px;
+    margin-right: 10px;
+  }
+}

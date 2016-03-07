@@ -1,0 +1,51 @@
+<table class="table table-hover people-table">
+    <thead>
+    <tr>
+        <th>
+            <input type="checkbox"
+                   ng-model="selectAll"
+                   ng-change="toggleAll()" />
+            <span class="p">Select all</span>
+
+            <button class="btn btn-transparent pull-right"
+                    ng-click="deleteSelected()">
+                <span class="glyphicon glyphicon-trash icon-left"></span>
+                Delete</button>
+
+            <button class="btn btn-transparent pull-right">
+                <span class="glyphicon glyphicon-tag icon-left"></span>
+                Set Tag</button>
+
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="person in people"
+        ng-if="!person.isDisabled"
+        ng-class="{'active' : person.id == activePerson.id }"
+        ng-click="setActivePerson($event, person)">
+        <td class="p">
+            <input type="checkbox"
+                   class="select-person"
+                   ng-model="person.isSelected" />
+        </td>
+
+        <td ng-if="person.profile_picture" class="p"><img class="photo" ng-src="{{person.profilePhotoUrl}}"/></td>
+        <td ng-if="!person.profile_picture" class="p">
+                            <span class="photo-placeholder"
+                                  ng-style="{'background-color': person.photoBackgroundColor}">{{person.initials}}</span>
+        </td>
+
+        <td class="p bold name">{{person.first_name}} {{person.last_name}}</td>
+        <td class="p italic">{{person.job_title}}</td>
+        <td class="p"><div class="tag" ng-style="{'background-color': person.tagColor}"></div></td>
+
+        <td ng-if="person.favourite" class="p">
+            <span class="glyphicon glyphicon-star" ng-click="toggleFavourite(person)"></span>
+        </td>
+        <td ng-if="!person.favourite" class="p">
+            <span class="glyphicon glyphicon-star-empty" ng-click="toggleFavourite(person)"></span>
+        </td>
+    </tr>
+    </tbody>
+</table>

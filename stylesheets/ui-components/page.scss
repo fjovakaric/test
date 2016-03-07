@@ -1,0 +1,38 @@
+.page {
+  width: 1360px;
+  height: 100%;
+  margin-left: 80px;
+  padding: 0;
+
+  .page-navigation {
+    float: left;
+    width: 210px;
+    height: 100%;
+    background-color: $purple-two;
+    padding: 20px;
+
+    h1 {
+      margin-left: 20px;
+      color: white;
+    }
+    h3 {
+      color: $grey-one;
+      border-color: $grey-one;
+    }
+    p,
+    .p {
+      color: $grey-one;
+    }
+
+
+
+  }
+
+  .sub-page {
+    float: left;
+    height: 100%;
+    width: 1150px;
+    background-color: $grey-background-one;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,54 @@
+.page-contacts .sub-page .contacts-all {
+  .header-row {
+    h1 {
+      margin-left: 40px;
+    }
+    
+    .search-form {
+      width: 550px;
+      display: inline-block;
+      margin: 8px 0 0 70px;
+    }
+
+    .header-buttons {
+      margin: 8px 5px 0 0;
+    }
+  }
+
+  .people-list,
+  .person-profile {
+    height: 612px;
+    margin: 5px;
+    padding: 0;
+    border: 1px solid $grey-two;
+  }
+
+  .people-list {
+    background-color: $grey-background-two;
+    padding: 20px;
+
+    .contacts-number {
+      margin-top: 15px;
+      color: $grey-one;
+    }
+  }
+
+  .person-profile {
+    background-color: white;
+    .person-info-wrapper {
+      vertical-align: top;
+      padding: 35px 20px 20px 20px;
+      border-right: dotted 2px $grey-four;
+      display: inline-block;
+      height: 100%;
+      width: 45%;
+    }
+    .person-communication-wrapper {
+      vertical-align: top;
+      padding: 35px 20px 20px 20px;
+      display: inline-block;
+      height: 100%;
+      width: 54%;
+    }
+  }
+}

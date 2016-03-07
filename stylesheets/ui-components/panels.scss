@@ -1,0 +1,53 @@
+.pnl {
+  &.pnl-dark {
+    margin: 10px;
+    .pnl-heading {
+      padding: 1px 10px;
+      border-bottom: 1px solid $grey-one;
+
+      .pnl-icon:hover {
+        color: white;
+        cursor: pointer;
+      }
+    }
+    .pnl-body {
+      padding: 5px 13px 5px 10px;
+    }
+  }
+
+  &.pnl-info {
+    margin: 10px 0;
+
+    .pnl-heading {
+      padding: 10px;
+      border-bottom: 1px solid $grey-two;
+      text-transform: none;
+
+      .fa {
+        float: right;
+        color: $blue-one;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .pnl-body {
+      .stat-list {
+        .stat {
+          margin: 10px 20px;
+          .icon {
+            display: inline-block;
+            width: 15px;
+            margin-right: 10px;
+            text-align: center;
+          }
+          .data-type {
+            display: inline-block;
+            width: 70px;
+          }
+        }
+      }
+    }
+  }
+}

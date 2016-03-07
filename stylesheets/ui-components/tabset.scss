@@ -1,0 +1,60 @@
+.tabset {
+  &.sub-page-nav {
+    .tab-item {
+      color: $grey-one;
+
+      .tab-icon {
+        padding: 0 3px 0 7px;
+
+        font-size: 10px;
+        line-height: 12px;
+        color: $purple-two;
+      }
+
+      a,
+      a:focus,
+      a:active {
+        text-decoration: none;
+
+        color: inherit;
+      }
+
+      &.active {
+        color: $blue-one;
+
+        .tab-icon {
+          color: $blue-one;
+        }
+      }
+    }
+  }
+
+  &.tabset-blue {
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 0;
+
+    .tab-item {
+      display: inline-block;
+      padding: 10px 0;
+      margin: 0 10px;
+      text-transform: none;
+      color: $grey-three;
+
+      a,
+      a:focus,
+      a:hover,
+      a:active {
+        text-decoration: none;
+        color: inherit;
+      }
+
+
+      &:hover,
+      &.active {
+        color: $blue-one;
+        border-bottom: 2px solid $blue-one;
+      }
+    }
+  }
+
+}

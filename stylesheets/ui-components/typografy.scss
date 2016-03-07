@@ -1,0 +1,36 @@
+h1 {
+  font-size: 24px;
+  line-height: 28px;
+  font-family: $font-family-one;
+  color: black;
+  margin: 10px 0 20px 0;
+}
+h2 {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $font-family-one;
+  color: black;
+  margin: 5px 0 5px 0;
+}
+h3,
+.h3 {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-family-one;
+  color: black;
+  margin: 5px 0 5px 0;
+}
+p,
+.p {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 5px 0;
+  font-family: $font-family-two;
+}
+
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.uppercase { text-transform: uppercase; }
+.grey-three { color: $grey-three; }
+.blue-one { color: $blue-one; }
+.smaller { font-size: 0.7em; }
