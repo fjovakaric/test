@@ -4,10 +4,11 @@
 html,
 body {
   width: 1440px;
-  height: 710px;
+  height: 100vh;
+  min-height: 710px;
   margin: 0;
   padding: 0;
-  background-color: #FAFAFA;
+  background-color: #EAEAEA;
   position: relative; }
 
 ul {
@@ -20,7 +21,7 @@ ul {
   left: 0;
   top: 0;
   width: 80px;
-  height: 710px;
+  height: 100%;
   padding-top: 16px;
   background-color: #272532; }
   .navigation .nav-group .nav-item {
@@ -46,10 +47,6 @@ ul {
       background-color: #2C2D3B; }
       .navigation .nav-group .nav-item.active a, .navigation .nav-group .nav-item:hover a {
         color: white; }
-    .navigation .nav-group .nav-item.disabled:hover {
-      cursor: not-allowed; }
-      .navigation .nav-group .nav-item.disabled:hover a {
-        cursor: not-allowed; }
 
 .row {
   margin: 0; }
@@ -392,7 +389,7 @@ p,
       background-color: #EAEAEA; }
 
 .person-info {
-  overflow: hidden;
+  overflowY: hidden;
   height: 100%; }
   .person-info .profile-pic {
     height: 50px;
@@ -424,11 +421,14 @@ p,
   .person-info .profile-info {
     padding: 0 10px; }
   .person-info .side-btns {
-    padding: 0; }
+    padding: 0;
+    overflow: visible; }
     .person-info .side-btns .btn-email {
       margin: 5px 0 15px 0; }
   .person-info .btn-row {
     padding-top: 15px; }
+    .person-info .btn-row .btn + .btn {
+      margin-left: 10px; }
 
 .person-communication .feeds-heading {
   display: inline-block;
@@ -438,9 +438,9 @@ p,
   width: 58%;
   vertical-align: top; }
 .person-communication .feeds-view {
-  height: 500px;
+  height: 475px;
   overflow: scroll;
-  padding-top: 25px; }
+  margin-top: 25px; }
 .person-communication .feeds-wrapper {
   padding-right: 10px;
   position: relative; }

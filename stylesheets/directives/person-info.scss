@@ -1,5 +1,5 @@
 .person-info {
-  overflow: hidden;
+  overflowY: hidden;
   height: 100%;
 
   .profile-pic {
@@ -43,6 +43,7 @@
 
   .side-btns {
     padding: 0;
+    overflow: visible;
 
     .btn-email {
       margin: 5px 0 15px 0;
@@ -51,5 +52,9 @@
 
   .btn-row {
     padding-top: 15px;
+
+    .btn + .btn {
+      margin-left: 10px;
+    }
   }
 }

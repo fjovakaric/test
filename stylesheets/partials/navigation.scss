@@ -4,7 +4,7 @@
   left: 0;
   top: 0;
   width: 80px;
-  height: 710px;
+  height: 100%;
   padding-top: 16px;
   
   background-color: $purple-one;
@@ -41,12 +41,6 @@
         background-color: $purple-two;
         a {
           color: white;
-        }
-      }
-      &.disabled:hover {
-        cursor: not-allowed;
-        a {
-          cursor: not-allowed;
         }
       }
     }

@@ -13,23 +13,36 @@
                 templateUrl: 'app/directives/person-communication/view.html',
                 link: function (scope, element, attrs) {
                     scope.feeds = undefined;
-                    scope.lastActivity = new Date();
+                    scope.lastActivity = undefined;
 
                     function getFeeds() {
                         scope.feeds = [];
                         feedsService.getForPerson(scope.activePerson.id).then(function(response) {
                             response.forEach(function(feed) {
+                                scope.feeds.push(new Feed(feed));
+                            });
+                            setLastActivity();
+
+                            scope.feeds.forEach(function(feed) {
                                 peopleService.getPerson(feed.reciever_id).then(function(reciever) {
                                     feed.reciever = new Person(reciever);
-                                    scope.feeds.push(new Feed(feed));
-                                    if (feed.feedDate < scope.lastActivity) {
-                                        scope.lastActivity = feed.feedDate;
-                                    }
                                 });
-                            });
+                            })
                         });
                     }
 
+                    function setLastActivity() {
+                        if (!scope.feeds.length) {
+                            scope.lastActivity = undefined;
+                            return;
+                        }
+                        scope.lastActivity = new Date(0);
+                        scope.feeds.forEach(function(feed) {
+                            if (feed.feedDate > scope.lastActivity) {
+                                scope.lastActivity = feed.feedDate;
+                            }
+                        })
+                    }
                     getFeeds();
 
                     scope.$watch('activePerson', function(oldVal, newVal) {

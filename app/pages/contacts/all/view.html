@@ -14,16 +14,23 @@
         </form>
 
         <div class="header-buttons pull-right">
-            <button class="btn btn-green btn-m"><i class="fa fa-plus icon-left"></i> Add Contact </button>
+            <button class="btn btn-green btn-m"
+                    tooltip-placement="bottom"
+                    uib-tooltip="Feature under construction"><i class="fa fa-plus icon-left"></i> Add Contact </button>
 
             <div class="btn-group dropdown dropdown-right" uib-dropdown>
-                <button id="split-button" class="btn btn-black btn-m"><i class="fa fa-plus icon-left"></i> Import From </button>
-                <!--<button id="split-button" type="button" class="btn btn-danger">Action</button>-->
-                <button type="button" class="btn btn-black btn-m" uib-dropdown-toggle>
+                <button id="split-button" class="btn btn-black btn-m"
+                        tooltip-placement="bottom"
+                        uib-tooltip="Feature under construction"><i class="fa fa-plus icon-left"></i> Import From </button>
+                <button type="button" class="btn btn-black btn-m"
+                        tooltip-placement="bottom"
+                        uib-tooltip="Feature under construction"
+                        uib-dropdown-toggle>
                     <span class="caret"></span>
                     <span class="sr-only">Split button!</span>
                 </button>
-                <ul uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                <ul uib-dropdown-menu role="menu"
+                    aria-labelledby="split-button">
                     <li role="menuitem"><a href="#">Option 1</a></li>
                     <li role="menuitem"><a href="#">Option 2</a></li>
                     <li role="menuitem"><a href="#">Option 3</a></li>

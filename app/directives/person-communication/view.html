@@ -2,12 +2,14 @@
     <div class="row">
         <div class="feeds-heading">
             <h2> Activities FEEDS </h2>
-            <p class="grey-three smaller"> Last activity: {{ lastActivity | date : 'd MMM yyyy' }} </p>
+            <p ng-if="lastActivity" class="grey-three smaller"> Last activity: {{ lastActivity | date : 'd MMM yyyy' }} </p>
         </div>
         <form class="form-inline feeds-search">
             <div class="form-group">
                 <input class="form-control input-icon-right"
                        ng-model="searchWord"
+                       tooltip-placement="bottom"
+                       uib-tooltip="Feature under construction"
                        placeholder="Search by keyword">
                 <i class="fa fa-search icon-right"></i>
             </div>
@@ -38,8 +40,10 @@
                         <span class="photo-placeholder smaller"
                               ng-if="!feed.reciever.profile_picture"
                               ng-style="{'background-color': feed.reciever.photoBackgroundColor}">{{feed.reciever.initials}}</span>
-                        <span class="p blue-one pull-right">{{feed.action.moreAction}}</span>
-                        <p class="reply">{{feed.reciever.initials}} {{feed.reciever.first_name}} {{feed.action.reply}}</p>
+                        <span class="p pull-right"
+                              tooltip-placement="left"
+                              uib-tooltip="Feature under construction"><a href="#" class="blue-one">{{feed.action.moreAction}}</a></span>
+                        <p class="reply">{{feed.reciever.first_name}} {{feed.action.reply}}</p>
                     </div>
                 </div>
             </div>
